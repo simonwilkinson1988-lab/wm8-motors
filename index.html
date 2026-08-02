@@ -68,7 +68,7 @@
 
         /* Sticky CTA (mobile) */
         .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--steel); padding: 12px 16px; display: flex; gap: 10px; z-index: 1000; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
-        .sticky-cta a { flex: 1; text-align: center; padding: 14px 12px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+        .sticky-cta a { flex: 1; text-align: center; padding: 14px 12px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; min-height: 48px; display: flex; align-items: center; justify-content: center; }
         .sticky-cta a:active { transform: scale(0.96); }
         .btn-call { background: var(--accent); color: var(--white); }
         .btn-whatsapp { background: var(--success); color: var(--white); }
@@ -77,28 +77,28 @@
         .site-header { background: var(--white); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 900; }
         .logo-link { text-decoration: none; display: flex; align-items: center; }
         .logo-img { height: 56px; width: auto; }
-        .header-phone { color: var(--accent); font-size: 0.9rem; font-weight: 600; text-decoration: none; padding: 8px 16px; border: 2px solid var(--accent); border-radius: 6px; transition: all 0.2s; }
+        .header-phone { color: var(--accent); font-size: 0.9rem; font-weight: 600; text-decoration: none; padding: 8px 16px; border: 2px solid var(--accent); border-radius: 6px; transition: all 0.2s; min-height: 44px; display: flex; align-items: center; }
         .header-phone:hover { background: var(--accent); color: var(--white); }
 
-        /* Hero */
+        /* Hero - mobile first */
         .hero { background: linear-gradient(160deg, var(--steel) 0%, #0f172a 100%); display: grid; grid-template-columns: 1fr; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(3,105,161,0.15) 0%, transparent 70%); border-radius: 50%; }
-        .hero-content { padding: 48px 20px 56px; position: relative; z-index: 1; }
+        .hero-img { width: 100%; max-height: 280px; object-fit: cover; object-position: center top; display: block; order: 1; }
+        .hero-content { padding: 36px 20px 48px; position: relative; z-index: 1; order: 2; }
         .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
         .hero-badge { display: inline-block; background: rgba(3,105,161,0.2); border: 1px solid rgba(3,105,161,0.4); color: #7dd3fc; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
         .hero h1 { font-size: 2.2rem; font-weight: 800; color: #ffffff; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
         .hero p { color: #94a3b8; font-size: 1rem; margin-bottom: 28px; max-width: 500px; line-height: 1.7; }
         .hero-cta { display: flex; flex-direction: column; gap: 12px; max-width: 320px; }
-        .hero-cta a { display: block; padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; text-align: center; }
+        .hero-cta a { display: flex; align-items: center; justify-content: center; padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; text-align: center; min-height: 52px; }
         .hero-cta a:active { transform: scale(0.97); }
         .hero-cta .btn-primary { background: var(--accent); color: #ffffff; }
         .hero-cta .btn-secondary { background: var(--success); color: #ffffff; }
-        .hero-img { width: 100%; height: 200px; object-fit: cover; object-position: center; display: block; border-top: 3px solid var(--accent); }
 
         /* Trust strip */
         .trust-strip { background: var(--white); padding: 18px 16px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid var(--border); }
         .trust-pill { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; color: var(--steel); }
-        .trust-pill .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
+        .trust-pill .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
 
         /* Sections */
         .section { padding: 56px 20px; }
@@ -147,19 +147,19 @@
         .cta-section .hero-cta { margin: 0 auto; }
 
         /* Footer */
-        .site-footer { background: #0f172a; padding: 32px 20px 100px; text-align: center; }
+        .site-footer { background: #0f172a; padding: 32px 20px 90px; text-align: center; }
         .site-footer .footer-logo { height: 48px; width: auto; margin-bottom: 16px; }
         .site-footer p { color: #64748b; font-size: 0.82rem; margin-bottom: 4px; }
         .site-footer a { color: var(--accent); text-decoration: none; }
         .footer-links { margin-top: 16px; display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
-        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; min-height: 44px; display: inline-flex; align-items: center; }
         .footer-links a:hover { color: var(--accent); }
 
         /* Desktop */
         @media (min-width: 640px) {
             .hero { grid-template-columns: 1fr 1fr; }
-            .hero-content { padding: 56px 30px 56px 40px; }
-            .hero-img { height: 100%; min-height: 300px; max-height: 420px; border-top: none; border-left: 3px solid var(--accent); }
+            .hero-content { padding: 56px 30px 56px 40px; order: 1; }
+            .hero-img { max-height: none; height: 100%; min-height: 300px; max-height: 420px; object-fit: cover; object-position: center; order: 2; border-left: 3px solid var(--accent); }
             .hero h1 { font-size: 2.6rem; }
             .hero-cta { flex-direction: row; max-width: 400px; }
             .sticky-cta { display: none; }
@@ -208,46 +208,46 @@
     </header>
 
     <section class="hero">
+        <img src="/img/hero-engine.jpg" alt="Kia 1.6 CRDI engine rebuild - WN8 Motors mobile mechanic Skelmersdale" class="hero-img">
         <div class="hero-content">
             <div class="hero-badges">
                 <span class="hero-badge">Mobile Mechanic</span>
                 <span class="hero-badge">Engine Specialists</span>
                 <span class="hero-badge">Skelmersdale</span>
             </div>
-            <h1>Your local mechanic in Skelmersdale.</h1>
-            <p>Mobile mechanic service specialising in the bigger jobs — timing belts, head gaskets, clutches, turbos — but we do the lot. Servicing, brakes, diagnostics, MOT repairs. We come to you at home or work.</p>
+            <h1>Engine specialists. Mobile service.</h1>
+            <p>When it's more than a brake pad change, you need someone who actually knows what they're doing. Timing belts, head gaskets, clutches, turbos, full rebuilds — plus all the regular stuff too. Based in Skelmersdale, working across WN8 and beyond.</p>
             <div class="hero-cta">
                 <a href="tel:+447586628412" class="btn-primary">Get a Free Quote</a>
                 <a href="https://wa.me/447586628412?text=Hi%2C%20I%20need%20a%20quote%20for%20some%20car%20work%20in%20Skem" class="btn-secondary">WhatsApp Us</a>
             </div>
         </div>
-        <img src="/img/hero-engine.jpg" alt="Kia 1.6 CRDI engine rebuild - WN8 Motors Skelmersdale" class="hero-img">
     </section>
 
     <div class="trust-strip">
-        <div class="trust-pill"><span class="dot"></span> 20+ years experience</div>
-        <div class="trust-pill"><span class="dot"></span> No call-out fee</div>
-        <div class="trust-pill"><span class="dot"></span> We come to you</div>
-        <div class="trust-pill"><span class="dot"></span> Free quotes</div>
+        <div class="trust-pill"><span class="dot"></span> Specialist-grade work</div>
+        <div class="trust-pill"><span class="dot"></span> Fixed price quotes</div>
+        <div class="trust-pill"><span class="dot"></span> Mobile across WN8</div>
         <div class="trust-pill"><span class="dot"></span> All makes &amp; models</div>
+        <div class="trust-pill"><span class="dot"></span> Parts warranty included</div>
     </div>
 
     <section class="section section-alt">
-        <h2>We come to you</h2>
+        <h2>How we work</h2>
         <p class="section-sub">Mobile mechanic service across Skelmersdale and surrounding areas. No garage visits needed.</p>
         <div class="mobile-card">
-            <h3>Mobile mechanic — at your door</h3>
-            <p>No need to take time off work or arrange lifts. We come to your driveway, your workplace car park, wherever's easiest for you. We bring all the tools, ramps, and equipment needed to do the job properly, right where your car sits.</p>
+            <h3>Mobile workshop, proper equipment</h3>
+            <p>We carry dealer-level diagnostic equipment, specialist tools, and proper lifting gear. Not a trolley jack and a prayer. Whether it's a driveway timing belt or a car park clutch swap, we set up properly and do it right.</p>
         </div>
         <div class="mobile-card">
-            <h3>Same-day callouts in Skelmersdale</h3>
-            <p>Car won't start? Overheating? Strange noise? For urgent work in the WN8 area we can often get to you same-day. Give us a ring or fire over a WhatsApp and we'll get back to you within minutes.</p>
+            <h3>Booked slots, not vague promises</h3>
+            <p>You'll get a confirmed date, a confirmed time, and a confirmed price. If something changes, you'll know about it before we pick up a spanner. No waiting around wondering if someone's going to show up.</p>
         </div>
     </section>
 
     <section class="section">
         <h2>Engine work specialists</h2>
-        <p class="section-sub">The bigger jobs that most mobile mechanics won't touch. Our bread and butter for 20 years.</p>
+        <p class="section-sub">The work that separates proper mechanics from parts fitters.</p>
         <ul class="spec-list">
             <li><span class="spec-name">Timing Belt &amp; Chain</span><span class="spec-detail">Full kit, tensioners, water pump included</span></li>
             <li><span class="spec-name">Head Gaskets</span><span class="spec-detail">Skim &amp; refit, pressure tested</span></li>
@@ -263,8 +263,8 @@
     </section>
 
     <section class="section section-alt">
-        <h2>Full car repair service</h2>
-        <p class="section-sub">Not just engine work. We cover everything your car needs.</p>
+        <h2>General repairs &amp; servicing</h2>
+        <p class="section-sub">Everything else your car needs, done to the same standard.</p>
         <div class="services-grid">
             <div class="service-card"><h3>Car Servicing</h3><p>Full and interim services. Oil, filters, plugs, fluids — all done at your door.</p><span class="price-hint">From £89</span></div>
             <div class="service-card"><h3>Brakes</h3><p>Pads, discs, calipers, brake fluid changes. Squealing? Grinding? We'll sort it.</p><span class="price-hint">From £65 per axle</span></div>
@@ -279,16 +279,15 @@
     </section>
 
     <section class="section">
-        <h2>Why Skelmersdale picks us</h2>
-        <p class="section-sub">Because we actually do what we say we'll do.</p>
-        <div class="why-block"><h3>20+ years turning spanners</h3><p>Two decades of daily graft on every make and model. We've seen every bolt snap, every gasket weep, and every turbo scream its last. There's no substitute for that experience.</p></div>
-        <div class="why-block"><h3>Honest pricing — the quote IS the price</h3><p>Parts, labour, all in. No phoning halfway through with "bad news" about something else. If there's something extra, we show you first and you decide.</p></div>
-        <div class="why-block"><h3>We actually turn up</h3><p>We book it, we confirm it, we turn up. On time. With the parts. No ghosting, no messing about.</p></div>
-        <div class="why-block"><h3>OE quality parts as standard</h3><p>Genuine or OE-equivalent. We'd rather do the job once properly than see you back in three months.</p></div>
-        <div class="why-block"><h3>No job too big, no job too small</h3><p>Wiper blades to full engine rebuilds. If it's got an engine, we'll fix it.</p></div>
+        <h2>Built on reputation</h2>
+        <p class="section-sub">We don't advertise much. Most work comes through word of mouth.</p>
+        <div class="why-block"><h3>Time-served, not YouTube-taught</h3><p>Over two decades diagnosing and fixing engines. When a timing chain needs doing on a car that's known for breaking tensioner bolts, we already know. That kind of knowledge doesn't come from a forum post.</p></div>
+        <div class="why-block"><h3>One price, no games</h3><p>We quote it, you approve it, we do it. The price doesn't change halfway through. If we find something unexpected, we'll show you the evidence and let you decide. Never pressure, never theatre.</p></div>
+        <div class="why-block"><h3>Right parts, first time</h3><p>OE-spec or genuine — not the cheapest pattern part off the shelf. A head gasket set that costs £30 more but lasts five years longer isn't really more expensive, is it?</p></div>
+        <div class="why-block"><h3>Your car, your schedule</h3><p>We work around you. Early starts, specific time slots, collection and return if needed. The job fits your life, not the other way around.</p></div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="areas">
         <h2>Areas we cover</h2>
         <p class="section-sub">Based in Skelmersdale, covering everywhere within 15 miles. No call-out fee locally.</p>
         <div class="area-grid">
@@ -296,7 +295,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="services">
         <h2>Common questions</h2>
         <p class="section-sub">Stuff people ask us all the time.</p>
         <div class="faq-item"><h3>How much does a timing belt cost in Skelmersdale?</h3><p>Typically £280-£550 for the full kit. Ring us with your reg and we'll give you an exact price in minutes.</p></div>
@@ -310,8 +309,8 @@
     </section>
 
     <section class="cta-section">
-        <h2>Need a mechanic in Skelmersdale?</h2>
-        <p>Tell us what's up. We'll give you a straight price and get it sorted.</p>
+        <h2>Got engine work that needs doing?</h2>
+        <p>Drop us a message with your reg and what's going on. Fixed quote back same day.</p>
         <div class="hero-cta">
             <a href="tel:+447586628412" class="btn-primary">Ring Us</a>
             <a href="https://wa.me/447586628412?text=Hi%2C%20I%20need%20a%20quote%20for%20some%20car%20work%20in%20Skem" class="btn-secondary">WhatsApp</a>
