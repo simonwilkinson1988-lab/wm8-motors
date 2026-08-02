@@ -13,14 +13,14 @@
     <meta name="ICBM" content="53.5509, -2.7762">
     <meta name="language" content="en-GB">
     <meta name="author" content="WN8 Motors">
-    <link rel="canonical" href="https://wn8motors.co.uk/">
+    <link rel="canonical" href="https://wm8-motors.vercel.app/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="WN8 Motors | Mobile Mechanic & Engine Specialists | Skelmersdale">
     <meta property="og:description" content="Mobile mechanic in Skelmersdale. Engine specialists - timing belts, head gaskets, clutches, turbos. We come to you. 20+ years experience.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
-    <meta property="og:url" content="https://wn8motors.co.uk/">
+    <meta property="og:url" content="https://wm8-motors.vercel.app/">
     <meta property="og:site_name" content="WN8 Motors">
     <meta property="og:image" content="https://wm8-motors.vercel.app/img/og-share.png">
     <meta property="og:image:width" content="1200">
@@ -44,150 +44,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        :root {
-            --bg: #f1f5f9;
-            --white: #ffffff;
-            --steel: #1e293b;
-            --slate: #475569;
-            --muted: #64748b;
-            --accent: #0369a1;
-            --accent-dark: #075985;
-            --accent-light: #e0f2fe;
-            --text: #1e293b;
-            --text-light: #475569;
-            --border: #e2e8f0;
-            --success: #059669;
-        }
-
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); line-height: 1.6; background: var(--bg); }
-
-        /* Sticky CTA (mobile) */
-        .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--steel); padding: 12px 16px; display: flex; gap: 10px; z-index: 1000; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
-        .sticky-cta a { flex: 1; text-align: center; padding: 14px 12px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; min-height: 48px; display: flex; align-items: center; justify-content: center; }
-        .sticky-cta a:active { transform: scale(0.96); }
-        .btn-call { background: var(--accent); color: var(--white); }
-        .btn-whatsapp { background: var(--success); color: var(--white); }
-
-        /* Header */
-        .site-header { background: var(--steel); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 900; }
-        .logo-link { text-decoration: none; display: flex; align-items: center; }
-        .logo-img { height: 90px; width: auto; }
-        .header-phone { color: var(--white); font-size: 0.9rem; font-weight: 600; text-decoration: none; padding: 10px 18px; border: 2px solid var(--accent); border-radius: 6px; transition: all 0.2s; background: var(--accent); }
-        .header-phone:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: var(--white); }
-
-        /* Hero - mobile first */
-        .hero { background: linear-gradient(160deg, var(--steel) 0%, #0f172a 100%); display: flex; flex-direction: column; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(3,105,161,0.15) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
-        .hero-img { width: 60%; max-width: 280px; height: auto; display: block; margin: 32px auto 0; flex-shrink: 0; }
-        .hero-content { padding: 32px 20px 48px; position: relative; z-index: 1; }
-        .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-        .hero-badge { display: inline-block; background: rgba(3,105,161,0.2); border: 1px solid rgba(3,105,161,0.4); color: #7dd3fc; font-size: 0.72rem; font-weight: 600; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .hero h1 { font-size: 2.2rem; font-weight: 800; color: #ffffff; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
-        .hero p { color: #94a3b8; font-size: 1rem; margin-bottom: 28px; max-width: 500px; line-height: 1.7; }
-        .hero-cta { display: flex; flex-direction: column; gap: 12px; max-width: 320px; }
-        .hero-cta a { display: flex; align-items: center; justify-content: center; padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; text-align: center; min-height: 52px; }
-        .hero-cta a:active { transform: scale(0.97); }
-        .hero-cta .btn-primary { background: var(--accent); color: #ffffff; }
-        .hero-cta .btn-secondary { background: var(--success); color: #ffffff; }
-
-        /* Trust strip */
-        .trust-strip { background: var(--white); padding: 18px 16px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid var(--border); }
-        .trust-pill { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; color: var(--steel); }
-        .trust-pill .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
-
-        /* Sections */
-        .section { padding: 56px 20px; }
-        .section-alt { background: var(--white); }
-        .section h2 { font-size: 1.7rem; font-weight: 800; color: var(--steel); margin-bottom: 8px; letter-spacing: -0.3px; }
-        .section-sub { color: var(--muted); margin-bottom: 32px; font-size: 0.95rem; }
-
-        /* Services grid */
-        .services-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
-        .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-        .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--steel); margin-bottom: 6px; }
-        .service-card p { color: var(--text-light); font-size: 0.88rem; line-height: 1.6; }
-        .service-card .price-hint { margin-top: 12px; font-size: 0.78rem; color: var(--accent-dark); font-weight: 700; background: var(--accent-light); display: inline-block; padding: 3px 10px; border-radius: 4px; }
-
-        /* Mobile cards */
-        .mobile-card { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--success); padding: 24px 20px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-        .mobile-card h3 { color: var(--steel); font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
-        .mobile-card p { color: var(--text-light); font-size: 0.9rem; line-height: 1.7; }
-
-        /* Spec list */
-        .spec-list { list-style: none; background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-        .spec-list li { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-        .spec-list li:last-child { border-bottom: none; }
-        .spec-list li:nth-child(even) { background: var(--bg); }
-        .spec-name { font-weight: 600; color: var(--steel); font-size: 0.95rem; }
-        .spec-detail { color: var(--muted); font-size: 0.82rem; text-align: right; max-width: 50%; }
-
-        /* Why blocks */
-        .why-block { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 24px 20px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-        .why-block h3 { font-size: 1rem; font-weight: 700; color: var(--steel); margin-bottom: 8px; }
-        .why-block p { color: var(--text-light); font-size: 0.9rem; line-height: 1.7; }
-
-        /* Area grid */
-        .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-        .area-chip { background: var(--white); border: 1px solid var(--border); color: var(--steel); padding: 10px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-align: center; }
-
-        /* FAQ */
-        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 20px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-        .faq-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--steel); margin-bottom: 8px; }
-        .faq-item p { color: var(--text-light); font-size: 0.88rem; line-height: 1.7; }
-
-        /* CTA */
-        .cta-section { background: linear-gradient(160deg, var(--steel) 0%, #0f172a 100%); padding: 56px 20px; text-align: center; }
-        .cta-section h2 { font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 12px; }
-        .cta-section p { color: #94a3b8; margin-bottom: 28px; font-size: 0.95rem; }
-        .cta-section .hero-cta { margin: 0 auto; }
-
-        /* Footer */
-        .site-footer { background: #0f172a; padding: 32px 20px 90px; text-align: center; }
-        .site-footer .footer-logo { height: 48px; width: auto; margin-bottom: 16px; }
-        .site-footer p { color: #64748b; font-size: 0.82rem; margin-bottom: 4px; }
-        .site-footer a { color: var(--accent); text-decoration: none; }
-        .footer-links { margin-top: 16px; display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
-        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; min-height: 44px; display: inline-flex; align-items: center; }
-        .footer-links a:hover { color: var(--accent); }
-
-        /* Desktop */
-        @media (min-width: 640px) {
-            .hero { flex-direction: row; align-items: stretch; }
-            .hero-img { width: 40%; max-width: none; height: auto; margin: 0; padding: 0; order: 2; flex-shrink: 0; object-fit: cover; }
-            .hero-content { padding: 56px 40px 56px 40px; flex: 1; order: 1; display: flex; flex-direction: column; justify-content: center; }
-            .hero h1 { font-size: 2.6rem; }
-            .hero-cta { flex-direction: row; max-width: 400px; }
-            .sticky-cta { display: none; }
-            .site-footer { padding-bottom: 32px; }
-            .services-grid { grid-template-columns: 1fr 1fr; }
-            .area-grid { grid-template-columns: 1fr 1fr 1fr; }
-        }
-
-        @media (min-width: 768px) {
-            .section { padding: 72px 40px; }
-        }
-
-        @media (min-width: 1024px) {
-            .section { padding: 80px 60px; max-width: 960px; margin: 0 auto; }
-            .hero-content { padding: 72px 40px 72px 60px; max-width: 560px; }
-            .services-grid { grid-template-columns: 1fr 1fr 1fr; }
-            .area-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
-        }
-
-        @media (max-width: 639px) {
-            .header-phone { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
 
 
     <!-- Schema: AutoRepair -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"AutoRepair","name":"WN8 Motors","alternateName":"WN8 Motors Mobile Mechanic Skelmersdale","description":"Mobile mechanic and engine repair specialists in Skelmersdale, Lancashire. Timing belts, head gaskets, clutches, turbo repairs, servicing, brakes, diagnostics. We come to you at home or work.","url":"https://wn8motors.co.uk","telephone":"+447586628412","priceRange":"££","currenciesAccepted":"GBP","paymentAccepted":"Cash, Bank Transfer, Card","areaServed":[{"@type":"City","name":"Skelmersdale","containedInPlace":{"@type":"AdministrativeArea","name":"Lancashire"}},{"@type":"City","name":"Up Holland"},{"@type":"City","name":"Ormskirk"},{"@type":"City","name":"Wigan"},{"@type":"City","name":"St Helens"},{"@type":"City","name":"Burscough"},{"@type":"City","name":"Rainford"},{"@type":"City","name":"Parbold"},{"@type":"City","name":"Appley Bridge"},{"@type":"City","name":"Ashurst"},{"@type":"City","name":"Billinge"},{"@type":"City","name":"Standish"},{"@type":"City","name":"Dalton"},{"@type":"City","name":"Newburgh"},{"@type":"City","name":"Lathom"},{"@type":"City","name":"Crawford"},{"@type":"City","name":"Wrightington"},{"@type":"City","name":"Shevington"},{"@type":"City","name":"Gathurst"},{"@type":"City","name":"Roby Mill"},{"@type":"City","name":"Digmoor"},{"@type":"City","name":"Tanhouse"},{"@type":"City","name":"Birch Green"},{"@type":"City","name":"Westhead"}],"address":{"@type":"PostalAddress","addressLocality":"Skelmersdale","addressRegion":"Lancashire","postalCode":"WN8","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":"53.5509","longitude":"-2.7762"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}],"serviceType":["Mobile Mechanic","Engine Rebuild","Timing Belt Replacement","Head Gasket Repair","Clutch Replacement","Turbo Repair","Gearbox Repair","Car Servicing","Brake Repair","Vehicle Diagnostics","DPF Cleaning","Cambelt Replacement","Starter Motor Replacement","Alternator Replacement","Suspension Repair","Oil Change","MOT Failure Repairs"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Car Repair Services Skelmersdale","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Timing Belt Replacement Skelmersdale","description":"Full timing belt kit replacement with tensioners. We come to you in Skelmersdale and surrounding areas."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Head Gasket Repair Skelmersdale","description":"Head gasket replacement with skim and pressure test. Mobile service across Skelmersdale, Up Holland, Ormskirk."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Mechanic Skelmersdale","description":"Mobile car repair service in Skelmersdale. Servicing, brakes, diagnostics, and engine work at your door."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Clutch Replacement Skelmersdale","description":"Complete clutch kit replacement including DMF and CSC. Serving Skelmersdale, Wigan, and West Lancashire."}}]},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"47","bestRating":"5"}}
+    {"@context":"https://schema.org","@type":"AutoRepair","name":"WN8 Motors","alternateName":"WN8 Motors Mobile Mechanic Skelmersdale","description":"Mobile mechanic and engine repair specialists in Skelmersdale, Lancashire. Timing belts, head gaskets, clutches, turbo repairs, servicing, brakes, diagnostics. We come to you at home or work.","url":"https://wm8-motors.vercel.app","telephone":"+447586628412","priceRange":"££","currenciesAccepted":"GBP","paymentAccepted":"Cash, Bank Transfer, Card","areaServed":[{"@type":"City","name":"Skelmersdale","containedInPlace":{"@type":"AdministrativeArea","name":"Lancashire"}},{"@type":"City","name":"Up Holland"},{"@type":"City","name":"Ormskirk"},{"@type":"City","name":"Wigan"},{"@type":"City","name":"St Helens"},{"@type":"City","name":"Burscough"},{"@type":"City","name":"Rainford"},{"@type":"City","name":"Parbold"},{"@type":"City","name":"Appley Bridge"},{"@type":"City","name":"Ashurst"},{"@type":"City","name":"Billinge"},{"@type":"City","name":"Standish"},{"@type":"City","name":"Dalton"},{"@type":"City","name":"Newburgh"},{"@type":"City","name":"Lathom"},{"@type":"City","name":"Crawford"},{"@type":"City","name":"Wrightington"},{"@type":"City","name":"Shevington"},{"@type":"City","name":"Gathurst"},{"@type":"City","name":"Roby Mill"},{"@type":"City","name":"Digmoor"},{"@type":"City","name":"Tanhouse"},{"@type":"City","name":"Birch Green"},{"@type":"City","name":"Westhead"}],"address":{"@type":"PostalAddress","addressLocality":"Skelmersdale","addressRegion":"Lancashire","postalCode":"WN8","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":"53.5509","longitude":"-2.7762"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}],"serviceType":["Mobile Mechanic","Engine Rebuild","Timing Belt Replacement","Head Gasket Repair","Clutch Replacement","Turbo Repair","Gearbox Repair","Car Servicing","Brake Repair","Vehicle Diagnostics","DPF Cleaning","Cambelt Replacement","Starter Motor Replacement","Alternator Replacement","Suspension Repair","Oil Change","MOT Failure Repairs"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Car Repair Services Skelmersdale","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Timing Belt Replacement Skelmersdale","description":"Full timing belt kit replacement with tensioners. We come to you in Skelmersdale and surrounding areas."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Head Gasket Repair Skelmersdale","description":"Head gasket replacement with skim and pressure test. Mobile service across Skelmersdale, Up Holland, Ormskirk."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Mechanic Skelmersdale","description":"Mobile car repair service in Skelmersdale. Servicing, brakes, diagnostics, and engine work at your door."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Clutch Replacement Skelmersdale","description":"Complete clutch kit replacement including DMF and CSC. Serving Skelmersdale, Wigan, and West Lancashire."}}]},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"47","bestRating":"5"}}
     </script>
 
     <!-- Schema: FAQPage -->
@@ -204,8 +66,48 @@
 
     <header class="site-header">
         <a href="/" class="logo-link"><img src="/img/logo-header.png" alt="WN8 Motors - Engine Specialists Skelmersdale" class="logo-img"></a>
+        <nav class="main-nav">
+            <a href="/">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-trigger">Services</button>
+                <div class="nav-dropdown-menu">
+                    <a href="/services/timing-belts.html">Timing Belts</a>
+                    <a href="/services/head-gaskets.html">Head Gaskets</a>
+                    <a href="/services/clutch-replacement.html">Clutches</a>
+                    <a href="/services/engine-rebuilds.html">Engine Rebuilds</a>
+                    <a href="/services/turbo-repairs.html">Turbo Repairs</a>
+                    <a href="/services/car-servicing.html">Car Servicing</a>
+                    <a href="/services/brakes.html">Brakes</a>
+                    <a href="/services/diagnostics.html">Diagnostics</a>
+                </div>
+            </div>
+            <a href="/about.html">About</a>
+            <a href="/areas.html">Areas</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
         <a href="tel:+447586628412" class="header-phone">07586 628412</a>
     </header>
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close">&times;</button>
+        <div class="mobile-nav-links">
+            <a href="/">Home</a>
+            <span class="nav-section-title">Services</span>
+            <a href="/services/timing-belts.html" class="nav-sub-link">Timing Belts</a>
+            <a href="/services/head-gaskets.html" class="nav-sub-link">Head Gaskets</a>
+            <a href="/services/clutch-replacement.html" class="nav-sub-link">Clutches</a>
+            <a href="/services/engine-rebuilds.html" class="nav-sub-link">Engine Rebuilds</a>
+            <a href="/services/turbo-repairs.html" class="nav-sub-link">Turbo Repairs</a>
+            <a href="/services/car-servicing.html" class="nav-sub-link">Car Servicing</a>
+            <a href="/services/brakes.html" class="nav-sub-link">Brakes</a>
+            <a href="/services/diagnostics.html" class="nav-sub-link">Diagnostics</a>
+            <a href="/about.html">About</a>
+            <a href="/areas.html">Areas</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
 
     <section class="hero">
         <img src="/img/hero-engine.jpg" alt="Kia 1.6 CRDI engine rebuild - WN8 Motors mobile mechanic Skelmersdale" class="hero-img">
@@ -249,26 +151,27 @@
         <h2>Engine work specialists</h2>
         <p class="section-sub">The work that separates proper mechanics from parts fitters.</p>
         <ul class="spec-list">
-            <li><span class="spec-name">Timing Belt &amp; Chain</span><span class="spec-detail">Full kit, tensioners, water pump included</span></li>
-            <li><span class="spec-name">Head Gaskets</span><span class="spec-detail">Skim &amp; refit, pressure tested</span></li>
-            <li><span class="spec-name">Clutch Replacement</span><span class="spec-detail">DMF, CSC, full kit options</span></li>
-            <li><span class="spec-name">Turbo Repairs</span><span class="spec-detail">Recon or new, fitted &amp; tested</span></li>
-            <li><span class="spec-name">Gearbox Work</span><span class="spec-detail">Manual &amp; auto, repair or exchange</span></li>
-            <li><span class="spec-name">Engine Rebuilds</span><span class="spec-detail">Bottom end, top end, full strip</span></li>
-            <li><span class="spec-name">DPF &amp; EGR</span><span class="spec-detail">Cleaning, regen, replacement</span></li>
-            <li><span class="spec-name">Cambelt &amp; Water Pump</span><span class="spec-detail">Combined service, save on labour</span></li>
-            <li><span class="spec-name">Starter Motors &amp; Alternators</span><span class="spec-detail">Supply &amp; fit, tested on vehicle</span></li>
-            <li><span class="spec-name">Injectors &amp; Fuel System</span><span class="spec-detail">Testing, cleaning, replacement</span></li>
+            <li><a href="/services/timing-belts.html"><span class="spec-name">Timing Belt &amp; Chain</span><span class="spec-detail">Full kit, tensioners, water pump included</span></a></li>
+            <li><a href="/services/head-gaskets.html"><span class="spec-name">Head Gaskets</span><span class="spec-detail">Skim &amp; refit, pressure tested</span></a></li>
+            <li><a href="/services/clutch-replacement.html"><span class="spec-name">Clutch Replacement</span><span class="spec-detail">DMF, CSC, full kit options</span></a></li>
+            <li><a href="/services/turbo-repairs.html"><span class="spec-name">Turbo Repairs</span><span class="spec-detail">Recon or new, fitted &amp; tested</span></a></li>
+            <li><a href="/services/engine-rebuilds.html"><span class="spec-name">Gearbox Work</span><span class="spec-detail">Manual &amp; auto, repair or exchange</span></a></li>
+            <li><a href="/services/engine-rebuilds.html"><span class="spec-name">Engine Rebuilds</span><span class="spec-detail">Bottom end, top end, full strip</span></a></li>
+            <li><a href="/services/diagnostics.html"><span class="spec-name">DPF &amp; EGR</span><span class="spec-detail">Cleaning, regen, replacement</span></a></li>
+            <li><a href="/services/timing-belts.html"><span class="spec-name">Cambelt &amp; Water Pump</span><span class="spec-detail">Combined service, save on labour</span></a></li>
+            <li><a href="/services/diagnostics.html"><span class="spec-name">Starter Motors &amp; Alternators</span><span class="spec-detail">Supply &amp; fit, tested on vehicle</span></a></li>
+            <li><a href="/services/diagnostics.html"><span class="spec-name">Injectors &amp; Fuel System</span><span class="spec-detail">Testing, cleaning, replacement</span></a></li>
         </ul>
     </section>
+
 
     <section class="section section-alt">
         <h2>General repairs &amp; servicing</h2>
         <p class="section-sub">Everything else your car needs, done to the same standard.</p>
         <div class="services-grid">
-            <div class="service-card"><h3>Car Servicing</h3><p>Full and interim services. Oil, filters, plugs, fluids — all done at your door.</p><span class="price-hint">From £89</span></div>
-            <div class="service-card"><h3>Brakes</h3><p>Pads, discs, calipers, brake fluid changes. Squealing? Grinding? We'll sort it.</p><span class="price-hint">From £65 per axle</span></div>
-            <div class="service-card"><h3>Diagnostics</h3><p>Dealer-level fault code reading and live data. Engine light on? We'll find why.</p><span class="price-hint">From £40</span></div>
+            <a href="/services/car-servicing.html" class="service-card"><h3>Car Servicing</h3><p>Full and interim services. Oil, filters, plugs, fluids — all done at your door.</p><span class="price-hint">From £89</span></a>
+            <a href="/services/brakes.html" class="service-card"><h3>Brakes</h3><p>Pads, discs, calipers, brake fluid changes. Squealing? Grinding? We'll sort it.</p><span class="price-hint">From £65 per axle</span></a>
+            <a href="/services/diagnostics.html" class="service-card"><h3>Diagnostics</h3><p>Dealer-level fault code reading and live data. Engine light on? We'll find why.</p><span class="price-hint">From £40</span></a>
             <div class="service-card"><h3>Suspension</h3><p>Springs, shocks, drop links, bushes, top mounts. Knocking? Pulling? Sorted.</p><span class="price-hint">Free check</span></div>
             <div class="service-card"><h3>MOT Failure Repairs</h3><p>Failed your MOT? We'll fix it at your home, often same day.</p><span class="price-hint">Free quote</span></div>
             <div class="service-card"><h3>Batteries</h3><p>Won't start? We'll test and fit a new one on the spot if needed.</p><span class="price-hint">From £79 fitted</span></div>
@@ -295,7 +198,7 @@
         </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section">
         <h2>Common questions</h2>
         <p class="section-sub">Stuff people ask us all the time.</p>
         <div class="faq-item"><h3>How much does a timing belt cost in Skelmersdale?</h3><p>Typically £280-£550 for the full kit. Ring us with your reg and we'll give you an exact price in minutes.</p></div>
@@ -324,10 +227,10 @@
         <p>Mon-Fri: 7:30am - 6pm | Sat: 8am - 2pm</p>
         <p style="margin-top: 8px;"><a href="tel:+447586628412">07586 628412</a></p>
         <div class="footer-links">
-            <a href="#services">Services</a>
-            <a href="#areas">Areas</a>
-            <a href="tel:+447586628412">Call</a>
-            <a href="https://wa.me/447586628412">WhatsApp</a>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/areas.html">Areas</a>
+            <a href="/contact.html">Contact</a>
         </div>
     </footer>
 
@@ -336,5 +239,6 @@
         <a href="https://wa.me/447586628412?text=Hi%2C%20I%20need%20a%20quote%20for%20some%20car%20work%20in%20Skem" class="btn-whatsapp">&#128172; WhatsApp</a>
     </div>
 
+    <script src="/js/nav.js"></script>
 </body>
 </html>
